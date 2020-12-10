@@ -1,10 +1,14 @@
 import './App.css';
-// import List from "./components/List"
-// import Input from "./components/Input"
+
+// Components
+import FruitContainer from './components/FruitContainer';
+
 
 function App() {
+  const fruits = ['banana', 'watermelon', 'apple', 'orange', 'jackfruit', 'kiwi', 'grape', 'grapefruit', 'mango', 'starfruit']
   return (
     <div className="App">
+      <FruitContainer fruits={fruits}/>
     </div>
   );
 }

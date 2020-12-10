@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 // Components
-import List, { Component } from './List';
-import Input, { Component } from './Input';
+import List from './List';
+import Input from './Input';
 
 class FruitContainer extends Component {
     constructor(props) {
         super()
         this.state = {
             // Initalize the fruit list to the full list passed into props
-            fruitsToDisplay: this.props.fruits,
+            fruitsToDisplay: props.fruits,
             // Initalize the filter value to an empty string
             filterValue: "",
         }
@@ -33,6 +33,10 @@ class FruitContainer extends Component {
     render() {
         // Inside of Input component, to access props, I will say props.value
         // Inside of List component, to access props, I will say props.fruits
+        console.log('---- state -----');
+        console.log(this.state.fruitsToDisplay);
+        console.log('---- props -----');
+        console.log(this.props.fruits);
         return(
             <div>
                 <Input value={this.state.filterValue} onChange={this.handleFilterChange}/>
